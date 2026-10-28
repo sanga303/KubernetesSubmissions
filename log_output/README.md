@@ -13,6 +13,6 @@ docker build -t juju3333/log-output:1.0 .
 
 ```bash
 k3d image import juju3333/log-output:1.0 -c k3s-default
-kubectl create deployment log-output --image=juju3333/log-output:1.0
+kubectl apply -f manifests/deployment.yaml
 kubectl logs -f deployment/log-output
 ```
