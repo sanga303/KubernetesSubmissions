@@ -20,6 +20,6 @@ docker run --rm -p 8080:8080 -e PORT=8080 juju3333/todo-app:1.2
 
 ```bash
 k3d image import juju3333/todo-app:1.2 -c k3s-default
-kubectl create deployment todo-app --image=juju3333/todo-app:1.2
+kubectl apply -f manifests/deployment.yaml
 kubectl logs deployment/todo-app
 ```
