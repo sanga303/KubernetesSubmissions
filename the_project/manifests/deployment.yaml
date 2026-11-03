@@ -14,6 +14,13 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: juju3333/todo-app:1.2
+          image: juju3333/todo-app:1.5
+          env:
+            - name: PORT
+              value: "3000"
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
 
 
